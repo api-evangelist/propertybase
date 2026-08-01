@@ -1,7 +1,27 @@
 aid: propertybase
 name: propertybase
-description: propertybase is a company surfaced as a portfolio company of point-nine and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Propertybase, now part of Lone Wolf Technologies, is a Salesforce-native real
+  estate CRM used by more than 20,000 agents and brokerages across 60+ countries
+  to manage leads, contacts, listings, transactions, marketing, and back-office
+  workflows. Propertybase GO (marketed today as Lone Wolf Front Office within the
+  Lone Wolf Foundation cloud) exposes a JSON REST API - the Propertybase GO API -
+  for reading and writing CRM records such as leads, agents, properties, tasks,
+  events, messages, and market reports, authenticated with a per-account
+  X-BL-API-Key header.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://propertybase.lwolf.com/hubfs/lw%20brand/lw-monogram-favicon.png
 url: https://raw.githubusercontent.com/api-evangelist/propertybase/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,15 +31,84 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-apis: []
+- Real Estate
+- CRM
+- PropTech
+- Salesforce
+- Lead Management
+- API
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- name: Propertybase GO API
+  description: >-
+    JSON REST API for the Propertybase GO / Lone Wolf Front Office real estate CRM.
+    Read and write CRM records - leads, agents, employees, teams, offices,
+    properties, tasks, events, messages, saved searches, market reports,
+    developments, and dynamic forms. Authenticated with a per-account X-BL-API-Key
+    header; base URL (API domain) is provisioned by Propertybase support.
+  humanURL: https://apidocs.propertybase.com/
+  baseURL: https://apidocs.propertybase.com
+  tags:
+  - Real Estate
+  - CRM
+  - REST
+  properties:
+  - type: Documentation
+    url: https://apidocs.propertybase.com/
+  - type: APIReference
+    url: https://apidocs.propertybase.com/
+  - type: Authentication
+    url: authentication/propertybase-authentication.yml
+  - type: Conventions
+    url: conventions/propertybase-conventions.yml
+  - type: ErrorCatalog
+    url: errors/propertybase-problem-types.yml
+  - type: Lifecycle
+    url: lifecycle/propertybase-lifecycle.yml
+  - type: ChangeLog
+    url: changelog/propertybase-changelog.yml
+  - type: Conformance
+    url: conformance/propertybase-conformance.yml
 common:
 - type: Website
-  url: https://www.propertybase.com
+  url: https://propertybase.lwolf.com
+- type: Documentation
+  url: https://apidocs.propertybase.com/
+- type: APIReference
+  url: https://apidocs.propertybase.com/
+- type: Authentication
+  url: authentication/propertybase-authentication.yml
+- type: Conventions
+  url: conventions/propertybase-conventions.yml
+- type: ErrorCatalog
+  url: errors/propertybase-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/propertybase-lifecycle.yml
+- type: ChangeLog
+  url: changelog/propertybase-changelog.yml
+- type: Conformance
+  url: conformance/propertybase-conformance.yml
+- type: LLMsTxt
+  url: llms/propertybase-llms.txt
+- type: DomainSecurity
+  url: security/propertybase-domain-security.yml
+- type: Support
+  url: https://community.lwolf.com/s/propertybase-se-resources
+- type: SignUp
+  url: https://www.lwolf.com/get-a-demo
+- type: TermsOfService
+  url: https://www.lwolf.com/terms-of-use
+- type: PrivacyPolicy
+  url: https://www.lwolf.com/privacy-policy
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 8
+  pass: local-v1

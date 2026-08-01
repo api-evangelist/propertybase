@@ -1,0 +1,61 @@
+generated: '2026-07-20'
+method: searched
+source: https://apidocs.propertybase.com/ (Propertybase GO API general conventions)
+docs: https://apidocs.propertybase.com/
+api: Propertybase GO API
+auth:
+  style: apiKey
+  header: X-BL-API-Key
+  ref: authentication/propertybase-authentication.yml
+content_negotiation:
+  request_content_type: application/json
+  response_content_type: application/json
+http_methods:
+  GET: Fetch a list of records, or a single record by id.
+  POST: Create a new record.
+  PATCH: Update an existing record (preferred).
+  PUT: Update an existing record (also accepted).
+  DELETE: Delete a record.
+response_envelope:
+  description: >-
+    Every response is a JSON object with a top-level "status" string
+    ("success", "failure", or "unauthorized"), a human-readable "message",
+    and either a "data" payload (on success) or an "errors" array (on failure).
+  success:
+    status: success
+    message: string
+    data: object | array of objects
+  failure:
+    status: failure
+    message: string
+    errors: array of strings
+  unauthorized:
+    status: unauthorized
+    message: string
+    errors: array of strings
+status_codes:
+  '2xx': Success.
+  '4xx': Client error (bad request, unauthorized, not found).
+  '401': API key missing or lacks permission for the resource/operation.
+  '5xx': Server error.
+versioning:
+  style: uri-path
+  current: v2
+  pattern: https://{account-api-domain}/api/v2/{resource}
+  ref: lifecycle/propertybase-lifecycle.yml
+filtering_and_ordering:
+  description: >-
+    Several list endpoints (leads, tasks, events, messages) accept filter
+    parameters and an ordering parameter, added incrementally over 2020-2021.
+    See the changelog for the exact per-resource parameters.
+  ref: changelog/propertybase-changelog.yml
+idempotency:
+  supported: false
+  notes: No idempotency-key mechanism is documented; create calls are not deduplicated.
+pagination:
+  documented: false
+  notes: No pagination parameters or envelope fields are documented in the public reference.
+rate_limiting:
+  documented: false
+  notes: No rate-limit headers or quotas are documented in the public reference.
+errors_ref: errors/propertybase-problem-types.yml

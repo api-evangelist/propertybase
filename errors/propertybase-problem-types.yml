@@ -1,0 +1,42 @@
+generated: '2026-07-20'
+method: searched
+source: https://apidocs.propertybase.com/ (error handling / response section)
+docs: https://apidocs.propertybase.com/
+api: Propertybase GO API
+format: custom-envelope
+format_notes: >-
+  Errors are NOT RFC 9457 problem+json. Every response carries a top-level
+  "status" string; failures return status "failure" or "unauthorized" with a
+  human-readable "message" and an "errors" array of strings.
+envelope:
+  status: failure | unauthorized
+  message: string (human-readable summary)
+  errors: array of strings (individual error messages)
+problem_types:
+- id: validation-failure
+  status: failure
+  http_status: '4xx'
+  title: Request could not be processed
+  detail: >-
+    Malformed request or invalid/missing field values. The "errors" array lists
+    each failing field or rule.
+  remediation: Correct the request body/parameters per the resource reference and retry.
+- id: unauthorized
+  status: unauthorized
+  http_status: '401'
+  title: API key missing or insufficient permissions
+  detail: >-
+    The X-BL-API-Key header is missing/invalid, or the key lacks the Read/Write/Delete
+    permission required for the resource or operation.
+  remediation: >-
+    Verify the X-BL-API-Key header and the account API domain; request the needed
+    per-resource permission from Propertybase support (help@propertybase.com).
+- id: server-error
+  status: failure
+  http_status: '5xx'
+  title: Server error
+  detail: The API encountered an unexpected condition while processing the request.
+  remediation: Retry later; contact Propertybase support if it persists.
+notes: >-
+  The public reference documents the envelope shape and status-code families
+  (2xx/4xx/5xx) rather than a fixed enumerated error-code catalog.

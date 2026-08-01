@@ -1,0 +1,34 @@
+generated: '2026-07-20'
+method: derived
+source: >-
+  Derived from the Propertybase GO API reference (https://apidocs.propertybase.com/)
+  and Propertybase/Lone Wolf marketing material. No OpenAPI/vocabulary artifact
+  exists for this provider to assert against.
+api: Propertybase GO API
+standards:
+- id: oauth2
+  conforms: false
+  evidence: Authentication is a static API key (X-BL-API-Key header); no OAuth 2.0 flow documented.
+- id: oidc
+  conforms: false
+  evidence: No OpenID Connect / openid-configuration endpoint (well-known probes returned soft-404 HTML).
+- id: rfc9457
+  conforms: false
+  evidence: Errors use a custom {status,message,errors[]} envelope, not application/problem+json.
+- id: json:api
+  conforms: false
+  evidence: Responses use a custom status/message/data envelope, not the JSON:API media type.
+- id: idempotency
+  conforms: false
+  evidence: No idempotency-key header or dedup semantics documented.
+- id: pagination
+  conforms: unknown
+  evidence: No pagination parameters or link semantics documented in the public reference.
+- id: soc2
+  conforms: true
+  evidence: >-
+    Propertybase marketing states SOC 2 and GDPR compliance and 99.9% uptime; no
+    dedicated public trust-center or certification page was located to verify scope.
+- id: gdpr
+  conforms: true
+  evidence: Propertybase marketing states GDPR compliance; privacy policy at https://www.lwolf.com/privacy-policy.

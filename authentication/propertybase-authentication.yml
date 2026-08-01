@@ -1,0 +1,31 @@
+generated: '2026-07-20'
+method: searched
+source: https://apidocs.propertybase.com/ (Propertybase GO API authentication section)
+docs: https://apidocs.propertybase.com/
+api: Propertybase GO API
+summary: >-
+  The Propertybase GO API authenticates every request with a static, per-account
+  API key passed in a custom HTTP header. Keys are issued by Propertybase support
+  and are all-scope (a single key can read, create, update, and delete records
+  subject to per-resource Read/Write/Delete permissions configured on the key).
+  There is no OAuth 2.0, OpenID Connect, or token-refresh flow documented for this API.
+schemes:
+- id: api-key-header
+  type: apiKey
+  in: header
+  name: X-BL-API-Key
+  description: >-
+    Static API key issued by Propertybase support (help@propertybase.com). Sent on
+    every request as the X-BL-API-Key header alongside the account-specific API
+    domain. Anyone holding the key can create, update, and delete records, so it
+    must be kept secret; a compromised key is revoked and reissued by support.
+  permissions_model: >-
+    Each key is granted granular Read / Write / Delete permissions per resource.
+    Requests exceeding a key's permission return an "unauthorized" envelope with a
+    401 status and an "API Key does not have permissions" error.
+transport:
+  tls_required: true
+  content_type: application/json
+notes:
+- Base URL is per-tenant; the account's API domain is provided by Propertybase support.
+- No OAuth2/OIDC scopes, so no scopes/ artifact is derived for this provider.

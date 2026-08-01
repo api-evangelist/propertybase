@@ -1,0 +1,46 @@
+generated: '2026-07-20'
+method: searched
+source: https://apidocs.propertybase.com/ ("Documentation Updates" section)
+docs: https://apidocs.propertybase.com/
+api: Propertybase GO API
+scheme: dated documentation-update log on the API reference page
+current_version: v2
+window: recent entries (log spans 2016-02-04 through 2021-05-04)
+entries:
+- date: '2021-05-04'
+  breaking: false
+  additions: true
+  highlights: Added deliver_email flag to POST Message calls to deliver email after message creation.
+- date: '2021-04-26'
+  breaking: false
+  additions: true
+  highlights: Added location field to Market Report update operations.
+- date: '2021-04-20'
+  breaking: false
+  additions: true
+  highlights: >-
+    Expanded Message response to include sender_name, sender_person_id,
+    sender_person_type, and a recipients array.
+- date: '2021-03-30'
+  breaking: false
+  additions: true
+  highlights: Added filtering parameters for Messages and ordering across message, lead, task, and event endpoints.
+- date: '2021-03-28'
+  breaking: false
+  additions: true
+  highlights: Added filter parameters for Leads, Tasks, and Events resources.
+- date: '2020-09-28'
+  breaking: false
+  additions: true
+  highlights: Added search and home-valuation attributes plus Bold Leads integration fields to Lead POST parameters.
+- date: '2020-08-04'
+  breaking: false
+  additions: true
+  highlights: Added Bold Leads ID and assignee email fields to Events POST/PATCH operations.
+- date: '2020-08-03'
+  breaking: false
+  additions: true
+  highlights: Added Bold Leads ID support to Lead show responses and POST/PATCH parameters.
+notes: >-
+  The public documentation-update log has not shown new dated entries since
+  2021-05-04; the product has since been folded into the Lone Wolf Foundation.

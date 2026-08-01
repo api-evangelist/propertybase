@@ -1,0 +1,35 @@
+generated: '2026-07-20'
+method: searched
+source: https://apidocs.propertybase.com/ + https://propertybase.lwolf.com/
+docs: https://apidocs.propertybase.com/
+api: Propertybase GO API
+versioning:
+  style: uri-path
+  current: v2
+  pattern: https://{account-api-domain}/api/v2/{resource}
+  notes: >-
+    A single major version (v2) is documented. No parallel version negotiation
+    header or media-type versioning is described.
+deprecation_policy:
+  documented: false
+  sunset_header: false
+  deprecation_header: false
+  notes: >-
+    No formal deprecation or Sunset/Deprecation (RFC 8594) header policy is
+    published for the Propertybase GO API.
+change_communication:
+  method: dated "Documentation Updates" changelog on the API reference
+  ref: changelog/propertybase-changelog.yml
+  first_entry: '2016-02-04'
+  last_entry: '2021-05-04'
+  notes: >-
+    Public API documentation updates span 2016-2021; the API predates and is now
+    part of the Lone Wolf Foundation cloud (Propertybase GO is marketed as Lone
+    Wolf Front Office).
+availability:
+  uptime_claim: 99.9% (Propertybase marketing)
+  status_page:
+    found: false
+    notes: No public, dedicated Propertybase/Lone Wolf status page was located.
+sla:
+  documented: false
