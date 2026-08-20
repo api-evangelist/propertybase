@@ -34,6 +34,13 @@ created: '2026-07-17'
 modified: '2026-07-20'
 tags:
 - Company
+- Real-Estate
+- CRM
+- PropTech
+- Salesforce
+- Lead Management
+tags_raw:
+- Company
 - Real Estate
 - CRM
 - PropTech
@@ -56,6 +63,10 @@ apis:
   humanURL: https://apidocs.propertybase.com/
   baseURL: https://apidocs.propertybase.com
   tags:
+  - Real-Estate
+  - CRM
+  - REST
+  tags_raw:
   - Real Estate
   - CRM
   - REST
