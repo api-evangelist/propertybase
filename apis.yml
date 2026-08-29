@@ -9,6 +9,17 @@ description: >-
   for reading and writing CRM records such as leads, agents, properties, tasks,
   events, messages, and market reports, authenticated with a per-account
   X-BL-API-Key header.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
