@@ -46,7 +46,7 @@ created: '2026-07-17'
 modified: '2026-07-20'
 tags:
 - Company
-- Real-Estate
+- Real Estate
 - CRM
 - PropTech
 - Salesforce
@@ -59,6 +59,7 @@ tags_raw:
 - Salesforce
 - Lead Management
 - API
+- Real-Estate
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -75,13 +76,14 @@ apis:
   humanURL: https://apidocs.propertybase.com/
   baseURL: https://apidocs.propertybase.com
   tags:
-  - Real-Estate
+  - Real Estate
   - CRM
   - REST
   tags_raw:
   - Real Estate
   - CRM
   - REST
+  - Real-Estate
   properties:
   - type: Documentation
     url: https://apidocs.propertybase.com/
